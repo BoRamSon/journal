@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 
-<!-- 웹사이트 완성하기! -->
-
 <html lang="en">
 
 <head>
@@ -9,26 +7,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB1 - JavaScript</title>
+
+    <Style>
+        body{
+            margin: 0;
+        }
+
+        a {
+            color:black;
+            text-decoration: none;
+        }
+        
+        h1 {
+            font-size:45px;
+            text-align: center;
+            border-bottom: 1px solid gray;
+            margin: 0;
+            padding: 20px;
+        }
+
+        ol {
+            border-right: 1px solid gray;
+            width: 100px;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #grid{
+            display:grid;
+            grid-template-columns: 150px 1fr;
+        }
+
+        #grid ol { 
+            padding-left: 33px;
+        }
+
+        #article{
+            padding-left: 25px;
+        }
+
+        @media(max-width:800px){
+            #grid{
+                display:block;
+            }
+            h1 {
+            border-bottom: none;
+            }
+            ol {
+            border-right: none;
+            }
+
+        }
+    </Style>
 </head>
 
 <body>
 
     <h1><a href="index.html">WEB</a></h1>
 
-    <ol>
-        <li><a href="1.html">HTML</a></li>
-        <li><a href="2.html">CSS</a></li>
-        <li><a href="3.html">JavaScript</a></li>
-    </ol>
-    
-    <br>
-    
-    <h2>◼︎ JavaScript</h2>
-
-    <p>
-        자바스크립트는 크로스 플랫폼(cross platform), 객체지향 스크립트 언어로 웹페이지의 동작을 담당한다. 예를 들어 자바스크립트를 이용하면 ‘버튼을 클릭하면 밑에 날짜를 보여줘’라는 식의 명령을 내릴 수 있다.
-    </p>
-
+    <div id="grid">
+            <ol>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+            </ol>
+            
+        <div id="article">
+            <h2>JavaScript</h2>
+            <p>
+                자바스크립트는 크로스 플랫폼(cross platform), 객체지향 스크립트 언어로 웹페이지의 동작을 담당한다. 예를 들어 자바스크립트를 이용하면 ‘버튼을 클릭하면 밑에 날짜를 보여줘’라는 식의 명령을 내릴 수 있다.
+            </p>
+        </div>
+    </div>    
 
     
 </body>
