@@ -16,6 +16,14 @@ h1 {
     padding: 20px;
 }
 
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 10px; margin-left: 20px; margin-bottom: 70px;
+}
+
 ol {
     border-right: 1px solid gray;
     width: 100px;
@@ -23,17 +31,26 @@ ol {
     padding: 20px;
 }
 
+img {
+    margin-left: 20px;
+}
+
 #grid{
+    font-size: 17px;
     display:grid;
     grid-template-columns: 150px 1fr;
 }
 
 #grid ol { 
-    padding-left: 33px;
+    padding-left: 34px;
+}
+
+#grid li{
+    padding-bottom: 15px;
 }
 
 #article{
-    padding-left: 25px;
+    padding-left: 30px;
 }
 
 @media(max-width:800px){

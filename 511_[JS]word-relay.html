@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>끝말잇기</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+
+
+<body>
+    <!-- 🟩 01. [HTML] HTML로 베이스를 만들어줬습니다. -->
+
+    <div><spen id="order">1</spen>번째 참가자</div>
+    <div>제시어:<spen id="word"></spen></div>
+    <input type='text'>
+    <button>입력</button>
+    
+
+    <!-- ============================================================== -->
+
+    <script>
+        //=================================================================
+        // 🟩 02. [JS] 변수or상수로 초기화해서 필요한 '기능?', '함수' 만들어놓기
+
+        const entryNumber = Number(prompt('몇 명이 참가하나요?'));
+        console.log(`${entryNumber}명이 참가하였습니다.`);
+        
+        const $order = document.querySelector('#order');
+        
+        
+        const $input = document.querySelector('input');
+        const $button = document.querySelector('button');
+        const $word = document.querySelector('#word');
+
+        let word;  // 최초 제시어
+
+        let typingWord;  // 지금 입력한 것
+
+
+
+        //=================================================================
+        // 🟩 03. [JS] 이벤트에 반응?하기 (큰 중복 1개를 없앤 상태입니다.)
+
+        const onInput = (event) => {
+            typingWord = event.target.value;
+        };
+        $input.addEventListener('input', onInput);
+
+                // -----------------------------------------
+
+        const onClickButton = () => {
+            if (!word || word[word.length - 1] === typingWord[0]) {
+                word = typingWord;
+                $word.textContent = word;
+                $input.value = '';
+                $input.focus();
+
+                const orderNumber = Number($order.textContent);
+                if (orderNumber + 1 > entryNumber) {
+                    $order.textContent = 1; // 다시 앞순서로 돌아가는 것입니다.
+                } else {
+                    $order.textContent = orderNumber + 1;
+                } 
+
+            } else {     
+                $order.textContent = 1;
+                word = '';
+                $word.textContent = word;
+                $input.value = '';
+                $input.focus();
+                console.log('제시어의 마지막 글자와 입력한 글자의 첫글자가 일치하지 않아 끝말잇기를 종료하였습니다.')
+                alert("올바르지 않는 단어를 입력하여 끝말잇기가 종료되었습니다.");
+            }
+        };        
+        $button.addEventListener('click', onClickButton);
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
