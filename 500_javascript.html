@@ -14,37 +14,104 @@
 
 <body>
 
-    <h1><a href="index.html">Welcome to My site~ I just Learn everything!</a></h1>
-
-    <div id="grid">  
-        <ol>
-            <li><a href="200_web.html">What is WEB?</a></li>
-            <li><a href="300_html.html">HTML</a></li>
-            <li><a href="400_css.html">CSS</a></li>
-            <li><a href="500_javascript.html">JavaScript</a></li>
-        </ol>
+    <div id="hiddenGrid">
+        <button id="hiddenMenuButton">메뉴</button>
         
+        <h1 id="hiddenBigTile"><a href="index.html">Welcome to My site~ I just Learn everything!</a></h1>
+    </div>
+    <div id="hiddenList">
+        <li><a href="index.html">◼︎ HOME</a></li>
+        <br>
+        <li><a href="200_web.html">◼︎ What is WEB?</a></li>
+        <br>
+        <li><a href="300_html.html">◼︎ HTML</a>
+            <!-- <ul>
+                <li class="plusMaginForSecondList">하위 리스트 항목 1</li>
+                <li>하위 리스트 항목 2</li>
+                <li>하위 리스트 항목 3</li>
+            </ul> -->
+        </li>
+        <br>
+        <li><a href="400_css.html">◼︎ CSS</a>
+            <!-- <ul>
+                <li class="plusMaginForSecondList">하위 리스트 항목 1</li>
+                <li>하위 리스트 항목 2</li>
+                <li>하위 리스트 항목 3</li>
+            </ul> -->
+        </li>
+        <br>
+        <li><a href="500_javascript.html">◼︎ JavaScript</a>
+            <ul>
+                <li class="plusMaginForSecondList"><a href="511_[JS]word-relay.html">[Game] Word-relay</a></li>
+                <!-- <li>하위 리스트 항목 2</li>
+                <li>하위 리스트 항목 3</li> -->
+            </ul>
+        </li>
+        <br>
+    </div>
+
+    <div id="topGrid">
+        <div id="emptyBox"></div>
+        <h1 id="bigTile"><a href="index.html">Welcome to My site~ I just Learn everything!</a></h1>
+    </div>
+
+    <div id="centerGrid">  
+        <ul class="ulList">
+            <li><a href="index.html">◼︎ HOME</a></li>
+            <br>
+            <li><a href="200_web.html">◼︎ What is WEB?</a></li>
+            <br>
+            <li><a href="300_html.html">◼︎ HTML</a>
+                <!-- <ul>
+                    <li class="plusMaginForSecondList">하위 리스트 항목 1</li>
+                    <li>하위 리스트 항목 2</li>
+                    <li>하위 리스트 항목 3</li>
+                </ul> -->
+            </li>
+            <br>
+            <li><a href="400_css.html">◼︎ CSS</a>
+                <!-- <ul>
+                    <li class="plusMaginForSecondList">하위 리스트 항목 1</li>
+                    <li>하위 리스트 항목 2</li>
+                    <li>하위 리스트 항목 3</li>
+                </ul> -->
+            </li>
+            <br>
+            <li><a href="500_javascript.html">◼︎ JavaScript</a>
+                <ul>
+                    <li class="plusMaginForSecondList"><a href="511_[JS]word-relay.html">[Game] Word-relay</a></li>
+                    <!-- <li>하위 리스트 항목 2</li>
+                    <li>하위 리스트 항목 3</li> -->
+                </ul>
+            </li>
+            <br>
             
+        </ul>
+
+    <!-- ======================================================== -->
+        <!-- 🟩 본문 -->
         <div id="article">
-            <h2>◼︎ What is JavaScript?</h2>
-            <p>
-                자바스크립트는 크로스 플랫폼(cross platform), 객체지향 스크립트 언어로 웹페이지의 동작을 담당한다. 
-                <br> 예를 들어 자바스크립트를 이용하면 ‘버튼을 클릭하면 밑에 날짜를 보여줘’라는 식의 명령을 내릴 수 있다.
-            </p>
+            
+            <!-- 🆘 details 사용했는데, 공부하고, 문제 수정해보세요. -->
+            <details style="border: 1cm;">
+                <summary style="color: blueviolet;"><h2 style="margin-top: 0px; padding-top: 0px;">◼︎ What is JavaScript?</h2></summary>
+                <!-- 🆘 여기 h2 top의 모든 걸 없앴는데... 화살표가 왜 저 위에 있는 것인지 모르겠넹.. -->
+                <p>
+                    자바스크립트는 크로스 플랫폼(cross platform), 객체지향 스크립트 언어로 웹페이지의 동작을 담당한다. 
+                    <br> 예를 들어 자바스크립트를 이용하면 ‘버튼을 클릭하면 밑에 날짜를 보여줘’라는 식의 명령을 내릴 수 있다.
+                </p>
+            </details>        
 
 
             <div>
-                <a href="511_[JS]word-relay.html"><h2>● <u style="color:blue">Game : Word Relay</u></h2></a>
+                <a href="511_[JS]word-relay.html"><h2>● <u style="color:blue">[Game] Word Relay</u></h2></a>
                 <p>
                     (You can enter the 'Word Relay World' if you click the word)
-                    <br>
-                    <br>
+                    <br><br>
                     * Create day : on Febrary 13 2024
-                    <br>
-                    <br>
+                    <br><br>
                     This game is word Relay.
-                    <br>
-                    <br>
+                    <br><br>
                     Thank you. Enjoy playing!
                 </p>
             </div>
@@ -53,6 +120,33 @@
         </div>
     </div>    
 
+    <!-- ======================================================== -->
+    <script>
+
+        // 1. 이렇게 변수 or 상수로 html코드를 이렇게 가져온다.
+        const hiddenMenuButton = document.querySelector('#hiddenMenuButton');
+        const hiddenGrid = document.querySelector('#hiddenGrid');
+        const hiddenList = document.querySelector('#hiddenList');
+        
+        // 2. 이벤트 시 작동할 함수, 즉 기능을 만든다.
+
+        // 3. 이벤트 시 위 기능을 실행하라는 이벤트 리스너를 만든다.
+
+        const onClickHiddenMenuButton = () => { 
+
+            // const windowWidth = window.innerWidth;
+            // if (windowWidth <= 800) {
+            // hiddenList.style.display = "block";
+            // } else {
+            //     hiddenList.style.display = "none";
+            // }
+
+            hiddenList.classList.toggle('active');
+        };
+        hiddenMenuButton.addEventListener('click',onClickHiddenMenuButton);
+
+    </script>
+    
     
 </body>
 </html>

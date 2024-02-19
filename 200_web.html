@@ -5,7 +5,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title> Web? </title>
+    <title> What is WEB? </title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -13,16 +13,82 @@
 
 <body>
     
-    <h1><a href="index.html">Welcome to My site~ I just Learn everything!</a></h1>
-
-    <div id="grid">  
-        <ol>
-            <li><a href="200_web.html">What is WEB?</a></li>
-            <li><a href="300_html.html">HTML</a></li>
-            <li><a href="400_css.html">CSS</a></li>
-            <li><a href="500_javascript.html">JavaScript</a></li>
-        </ol>
+    <div id="hiddenGrid">
+        <button id="hiddenMenuButton">메뉴</button>
         
+        <h1 id="hiddenBigTile"><a href="index.html">Welcome to My site~ I just Learn everything!</a></h1>
+    </div>
+    <div id="hiddenList">
+        <li><a href="index.html">◼︎ HOME</a></li>
+        <br>
+        <li><a href="200_web.html">◼︎ What is WEB?</a></li>
+        <br>
+        <li><a href="300_html.html">◼︎ HTML</a>
+            <!-- <ul>
+                <li class="plusMaginForSecondList">하위 리스트 항목 1</li>
+                <li>하위 리스트 항목 2</li>
+                <li>하위 리스트 항목 3</li>
+            </ul> -->
+        </li>
+        <br>
+        <li><a href="400_css.html">◼︎ CSS</a>
+            <!-- <ul>
+                <li class="plusMaginForSecondList">하위 리스트 항목 1</li>
+                <li>하위 리스트 항목 2</li>
+                <li>하위 리스트 항목 3</li>
+            </ul> -->
+        </li>
+        <br>
+        <li><a href="500_javascript.html">◼︎ JavaScript</a>
+            <ul>
+                <li class="plusMaginForSecondList"><a href="511_[JS]word-relay.html">[Game] Word-relay</a></li>
+                <!-- <li>하위 리스트 항목 2</li>
+                <li>하위 리스트 항목 3</li> -->
+            </ul>
+        </li>
+        <br>
+    </div>
+
+    <div id="topGrid">
+        <div id="emptyBox"></div>
+        <h1 id="bigTile"><a href="index.html">Welcome to My site~ I just Learn everything!</a></h1>
+    </div>
+
+    <div id="centerGrid">  
+        <ul class="ulList">
+            <li><a href="index.html">◼︎ HOME</a></li>
+            <br>
+            <li><a href="200_web.html">◼︎ What is WEB?</a></li>
+            <br>
+            <li><a href="300_html.html">◼︎ HTML</a>
+                <!-- <ul>
+                    <li class="plusMaginForSecondList">하위 리스트 항목 1</li>
+                    <li>하위 리스트 항목 2</li>
+                    <li>하위 리스트 항목 3</li>
+                </ul> -->
+            </li>
+            <br>
+            <li><a href="400_css.html">◼︎ CSS</a>
+                <!-- <ul>
+                    <li class="plusMaginForSecondList">하위 리스트 항목 1</li>
+                    <li>하위 리스트 항목 2</li>
+                    <li>하위 리스트 항목 3</li>
+                </ul> -->
+            </li>
+            <br>
+            <li><a href="500_javascript.html">◼︎ JavaScript</a>
+                <ul>
+                    <li class="plusMaginForSecondList"><a href="511_[JS]word-relay.html">[Game] Word-relay</a></li>
+                    <!-- <li>하위 리스트 항목 2</li>
+                    <li>하위 리스트 항목 3</li> -->
+                </ul>
+            </li>
+            <br>
+            
+        </ul>
+
+    <!-- ======================================================== -->
+        <!-- 🟩 본문 -->
         <div id="article">
             <h2>◼︎ WEB 의 역사</h2>
             <p>
@@ -36,6 +102,35 @@
             </p>
         </div>
     </div>    
+
+
+    <!-- ======================================================== -->
+    <script>
+    
+        // 1. 이렇게 변수 or 상수로 html코드를 이렇게 가져온다.
+        const hiddenMenuButton = document.querySelector('#hiddenMenuButton');
+        const hiddenGrid = document.querySelector('#hiddenGrid');
+        const hiddenList = document.querySelector('#hiddenList');
+        
+        // 2. 이벤트 시 작동할 함수, 즉 기능을 만든다.
+
+        // 3. 이벤트 시 위 기능을 실행하라는 이벤트 리스너를 만든다.
+
+        const onClickHiddenMenuButton = () => { 
+
+            // const windowWidth = window.innerWidth;
+            // if (windowWidth <= 800) {
+            // hiddenList.style.display = "block";
+            // } else {
+            //     hiddenList.style.display = "none";
+            // }
+
+            hiddenList.classList.toggle('active');
+        };
+        hiddenMenuButton.addEventListener('click',onClickHiddenMenuButton);
+
+    </script>
+    
 
 </body>
 
