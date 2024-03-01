@@ -1,0 +1,211 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>쿵쿵따 게임</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* .howManyPeople {
+        
+        } */
+
+        /* .whoIsTurn {
+        
+        } */
+
+
+        .forMargin {
+            margin-left: 20px;
+        }
+
+        /* .presentWord*/
+
+
+        .inputOkButton {
+            margin-left: 5px;
+        }
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <!-- 🔥 ⭐️ 🟥 아~ 기본베이스를 가지는 코드파일을 html, CSS, Script 3개를 별도로 만들어놓고 재탕해서 써먹야하는구나~~ -->
+ 
+    <div id="hiddenGrid"> <!-- hidden-TopGrid -->
+        <button id="hiddenMenuButton">메뉴</button>
+        
+        <h1 id="hiddenBigTile"><a href="index.html">Welcome to My site~ I just Learn everything!</a></h1>
+    </div>
+    <div id="hiddenList"> <!-- hidden-CenterGrid -->
+        <li><a href="index.html">◼︎ HOME</a></li>
+        <br>
+        <li><a href="200_web.html">◼︎ What is WEB?</a></li>
+        <br>
+        <li><a href="300_html.html">◼︎ HTML</a>
+            <!-- <ul>
+                <li class="plusMaginForSecondList">하위 리스트 항목 1</li>
+                <li>하위 리스트 항목 2</li>
+                <li>하위 리스트 항목 3</li>
+            </ul> -->
+        </li>
+        <br>
+        <li><a href="400_css.html">◼︎ CSS</a>
+            <!-- <ul>
+                <li class="plusMaginForSecondList">하위 리스트 항목 1</li>
+                <li>하위 리스트 항목 2</li>
+                <li>하위 리스트 항목 3</li>
+            </ul> -->
+        </li>
+        <br>
+        <li><a href="500_javascript.html">◼︎ JavaScript</a>
+            <ul>
+                <li class="plusMaginForSecondList"><a href="511_[JS]word-relay.html">[Game] Word-relay</a></li>
+                <!-- <li>하위 리스트 항목 2</li>
+                <li>하위 리스트 항목 3</li> -->
+            </ul>
+        </li>
+        <br>
+    </div>
+
+    <div id="topGrid">
+        <div id="emptyBox"></div>
+        <h1 id="bigTile"><a href="index.html">Welcome to My site~ I just Learn everything!</a></h1>
+    </div>
+
+    <div id="centerGrid">  
+        <ul class="ulList">
+            <li><a href="index.html">◼︎ HOME</a></li>
+            <br>
+            <li><a href="200_web.html">◼︎ What is WEB?</a></li>
+            <br>
+            <li><a href="300_html.html">◼︎ HTML</a>
+                <!-- <ul>
+                    <li class="plusMaginForSecondList">하위 리스트 항목 1</li>
+                    <li>하위 리스트 항목 2</li>
+                    <li>하위 리스트 항목 3</li>
+                </ul> -->
+            </li>
+            <br>
+            <li><a href="400_css.html">◼︎ CSS</a>
+                <!-- <ul>
+                    <li class="plusMaginForSecondList">하위 리스트 항목 1</li>
+                    <li>하위 리스트 항목 2</li>
+                    <li>하위 리스트 항목 3</li>
+                </ul> -->
+            </li>
+            <br>
+            <li><a href="500_javascript.html">◼︎ JavaScript</a>
+                <ul>
+                    <li class="plusMaginForSecondList"><a href="511_[JS]word-relay.html">[Game] Word-relay</a></li>
+                    <!-- <li>하위 리스트 항목 2</li>
+                    <li>하위 리스트 항목 3</li> -->
+                </ul>
+            </li>
+            <br>
+            
+        </ul>
+
+     <!-- ======================================================== -->
+        <!-- 🟩 본문 -->
+        <div id="article">
+
+            <div><h1 style="margin: 20px;">◼︎ 쿵쿵따 게임을 시작합니다.</h1></div>
+            <br>
+            <div>
+                <span class="howManyPeople forMargin">0</span>
+                <span>명이 참가하였습니다.</span>
+            </div>
+            <div><span class="whoIsTurn forMargin">1</span><span>번째 참가자 차례입니다.</span></div>
+            <br>
+            <div><span class="forMargin">마지막 입력 단어:</span><span class="presentWord"></span></div>
+            <br>
+            <div>
+                <span class="forMargin"><input type="text"></span>
+                <span><button class="inputOkBtn">완료</button></span>
+            </div>
+            <br>
+            <div>
+                <span class="reStartBtn forMargin"><button>재시작</button></span>
+                <span class="editPeopleBtn" style="margin-left: 10px;"><button>인원수정</button></span>
+            </div>
+
+        </div>
+    </div>      
+    
+
+
+    <script>
+
+        let howManyPeople = document.querySelector('.howManyPeople');
+        let whoIsTurn = document.querySelector('.whoIsTurn');
+        let presentWord = document.querySelector('.presentWord');
+        let inputOkBtn = document.querySelector('.inputOkBtn');
+
+        let reStartBtn = document.querySelector('.reStartBtn');
+        let editPeopleBtn = document.querySelector('.editPeopleBtn');
+
+
+
+        // 🟩 prompt에 숫자만 입력하게 하는 방법은??
+        // const possOnlyNumber = (n) => {
+        // }
+        // 🆘 뭔가 function으로 만들어보려다가... 그냥 for문 잔머리를 굴려서 해봤습니다. 대단하다...
+        const numInputPromFc = () => {    
+            for(let i = 0; i<=100; i++) {
+                const inputPromptText = window.prompt("참여할 인원은 몇 명입니까? (1~10의 숫자만 입력해주세요)");
+                const inputPrompt = Number(inputPromptText);
+                console.log(inputPrompt);
+                if(inputPromptText !== null){ //🔴대단하다... 근데 왜 prompt 취소버튼을 별도로 구분하는게 없을까... ㅠㅠ
+                    if(Number.isNaN(inputPrompt) || inputPrompt == "" || inputPrompt === 0 || inputPrompt > 10) {
+                        console.log("ㄴ 숫자가 아니거나, 10보다 높은 숫자를 입력되었습니다.");
+                        alert("숫자를 입력하지 않았거나, 10보다 높은 숫자를 입력했습니다. 다시 입력해주세요.");
+                    }else {
+                        console.log("ㄴ "+typeof(inputPrompt) + "가 입력되었습니다.");
+                        howManyPeople.textContent = inputPrompt;
+                        break;
+                    }
+                } else {
+                    alert(" 👋 취소하셨습니다.");
+                    break;
+                }
+            }
+        }
+
+        numInputPromFc();
+        
+        
+        
+
+
+
+
+        
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
