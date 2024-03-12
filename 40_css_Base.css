@@ -15,7 +15,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-p {
+.mainContents {
     margin-top: 10px; margin-left: 20px; margin-bottom: 70px;
 }
 
@@ -50,7 +50,7 @@ img {
 }
 
 #hiddenGrid{    
-    border-bottom: 1px solid gray; /* 🟢 제목 아래에 라인을 넣어서 구분합니다. */
+    border-bottom: 2px solid black; /* 🟢 제목 아래에 라인을 넣어서 구분합니다. */
     display:none;
     grid-template-columns: 100px 1fr /* 🔴 이 친구가 grid를 나눠주는 놈이다. div를 기준으로 나눠주심 */
 }
@@ -75,7 +75,7 @@ img {
 }
 
 #topGrid{
-    border-bottom: 1px solid gray; /* 🟢 제목 아래에 라인을 넣어서 구분합니다. */
+    border-bottom: 2px solid black; /* 🟢 제목 아래에 라인을 넣어서 구분합니다. */
     display:grid;
     grid-template-columns: 70px 1fr /* 🔴 이 친구가 grid를 나눠주는 놈이다. div를 기준으로 나눠주심 */
 }
@@ -95,7 +95,7 @@ img {
     bottom: 0;
     width: 200px;
     background-color: #fff;
-    border-right: 1px solid #ddd;
+    border-right: 2px solid black;
     z-index: 100;
     transform: translateX(-100%);
     transition: transform 0.2s ease-in-out;
@@ -125,7 +125,7 @@ img {
         /* 🟥 grid 첫빠따에 있는 놈으로 리스트이다. */
         /* 칼럼 나눠지는 기능 인지가 어렵습니다. 주석을 좀 적어넣도록 하겠습니다. */
         .ulList { /* 🟩 리스트의 왕 */
-            border-right: 1px solid gray; /* 🟢 리스트 옆에 라인을 넣어서 칼럼 구분을 합니다. */
+            border-right: 2px solid black; /* 🟢 리스트 옆에 라인을 넣어서 칼럼 구분을 합니다. */
             margin: 0;
             padding: 20px; 
             list-style-type: none; /* 앞에 붙는 ●이거 없애기 위해서 넣었습니다. */

@@ -1,0 +1,74 @@
+
+/* 🟩 폰트 적용 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+.articles {
+    font-family: 'Nanum Pen Script', cursive;
+    margin-right: 70px;
+}
+
+
+
+
+/* 🟩 Header 시작 --------- */
+
+.itsme {
+    text-align: right;
+}
+
+.myName {
+    font-size: 80px;                         
+    font-weight: bold;
+    color: green;
+    margin-bottom: 1px;
+}
+
+.myJob {
+    font-size: 30px;
+    color: blue;
+}
+
+
+
+
+/* 🟩 main Contents --------- */
+
+.boxSetting {
+    margin-top: 150px;    
+}
+
+.headline {
+    font-size: 50px;
+    font-weight: bold;
+    color: green;
+    border-bottom: 1.5px solid gray;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.semiContents {
+    font-size: 30px;
+}
+
+
+.display-between {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+
+.myWork {
+    font-size: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+
+}
+
+
+
+/* 🟩 footer로 끝내기 --------- */
+
+
