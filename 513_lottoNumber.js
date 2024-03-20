@@ -142,17 +142,17 @@ document.write(typeof name); // string
 
 // =======================
 
-var lottoNumber = [];
+// var lottoNumber = [];
 
-while (lottoNumber.length < 6) {
-    var num = lottoNumber.push(parseInt(Math.random()*45+1));
-    if (lottoNumber.indexOf(num) == -1) {
-        lottoNumber.push(num);
-    }
+// while (lottoNumber.length < 6) {
+//     var num = lottoNumber.push(parseInt(Math.random()*45+1));
+//     if (lottoNumber.indexOf(num) == -1) {
+//         lottoNumber.push(num);
+//     }
 
-}
-lottoNumber.sort((a,b)=>a-b); // 오름차순 정렬
-document.write(lottoNumber);
+// }
+// lottoNumber.sort((a,b)=>a-b); // 오름차순 정렬
+// document.write(lottoNumber);
 
 
 
@@ -176,12 +176,12 @@ while (lottoNumber.length < 6) {
 lottoNumber.sort((a,b)=>a-b); // 오름차순 정렬
 // document.write(lottoNumber);
 
-document.write('<div class='ball ball1'>' + lottoNumber[0] + '</div>');
-document.write('<div class='ball ball2'>' + lottoNumber[1] + '</div>');
-document.write('<div class='ball ball3'>' + lottoNumber[2] + '</div>');
-document.write('<div class='ball ball4'>' + lottoNumber[3] + '</div>');
-document.write('<div class='ball ball5'>' + lottoNumber[4] + '</div>');
-document.write('<div class='ball ball6'>' + lottoNumber[5] + '</div>');
+document.write('<div class="ball ball1">' + lottoNumber[0] + '</div>');
+document.write('<div class="ball ball2">' + lottoNumber[1] + '</div>');
+document.write('<div class="ball ball3">' + lottoNumber[2] + '</div>');
+document.write('<div class="ball ball4">' + lottoNumber[3] + '</div>');
+document.write('<div class="ball ball5">' + lottoNumber[4] + '</div>');
+document.write('<div class="ball ball6">' + lottoNumber[5] + '</div>');
 // 🔥 이런식으로 js 파일 내에 html을 작성할 수 있다는 것을 처음 알았습니다.
 
 
