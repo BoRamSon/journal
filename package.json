@@ -1,0 +1,25 @@
+{
+  "name": "journal",
+  "version": "1.0.0",
+  "description": "Learn coding and make a site",
+  "main": "050_javascript.js",
+  "scripts": {
+    "start": "node 050_javascript.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoRamSon/journal.git"
+  },
+  "keywords": [
+    "\"web\"",
+    "\"development\"",
+    "\"javascript\""
+  ],
+  "author": "BoRamSon / raiactivity@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BoRamSon/journal/issues"
+  },
+  "homepage": "https://github.com/BoRamSon/journal#readme"
+}
